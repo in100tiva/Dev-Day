@@ -1,0 +1,81 @@
+/* Flight options component styles with CSS variables */
+.flight-option {
+    transition: all var(--transition-normal);
+    border: 2px solid var(--border-gray-200);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    cursor: pointer;
+    background: var(--color-white);
+}
+
+.flight-option:hover {
+    background-color: var(--color-gray-50);
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.flight-option.selected {
+    background-color: var(--color-gray-100);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-primary);
+}
+
+.flight-option:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--color-gray-100);
+}
+
+.flight-option:disabled:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: var(--color-gray-100);
+}
+
+/* Flight option content */
+.flight-option-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-option-info {
+    flex: 1;
+}
+
+.flight-option-time {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.flight-option-route {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.flight-option-price {
+    text-align: right;
+}
+
+.flight-option-amount {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.flight-option-status {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.flight-option-status.available {
+    color: var(--color-success);
+}
+
+.flight-option-status.unavailable {
+    color: var(--color-error);
+}

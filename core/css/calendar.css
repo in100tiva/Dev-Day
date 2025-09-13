@@ -1,0 +1,73 @@
+/* Calendar component styles with CSS variables */
+.calendar-day {
+    transition: all var(--transition-normal);
+    border-radius: var(--radius-lg);
+    min-height: var(--calendar-day-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background-color: var(--color-gray-100);
+}
+
+.calendar-day.selected {
+    background-color: var(--color-primary);
+    color: var(--text-white);
+}
+
+.calendar-day:disabled {
+    color: var(--color-gray-400);
+    cursor: not-allowed;
+}
+
+.calendar-day:disabled:hover {
+    background-color: transparent;
+}
+
+/* Calendar navigation */
+.calendar-nav-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.calendar-nav-button:hover {
+    background-color: var(--color-gray-100);
+}
+
+.calendar-nav-button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Calendar grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--spacing-xs);
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.calendar-header-day {
+    text-align: center;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-gray-500);
+    padding: var(--spacing-sm) 0;
+}

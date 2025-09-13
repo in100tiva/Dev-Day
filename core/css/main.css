@@ -1,0 +1,187 @@
+/**
+ * Sistema de Reservas de Voo - Estilos Principais
+ * Desenvolvedor: Luan Oliveira dos Santos
+ * Projeto: Desafio Dev Day 2025
+ * 
+ * Arquivo principal que importa todos os estilos do sistema
+ * e define estilos globais e utilitários.
+ */
+
+/* Main stylesheet - imports all component styles */
+@import url('variables.css');
+@import url('base.css');
+@import url('calendar.css');
+@import url('flight-options.css');
+@import url('ticket.css');
+@import url('chat.css');
+
+/* Global styles */
+body {
+    background: var(--bg-gradient);
+    min-height: 100vh;
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+.transition-all {
+    transition: all var(--transition-normal);
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--text-white);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-button);
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--transition-normal);
+    border: 2px solid var(--color-primary);
+    cursor: pointer;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-primary-hover);
+}
+
+.btn-primary:disabled {
+    background-color: var(--color-gray-400);
+    border-color: var(--color-gray-400);
+    color: var(--color-gray-600);
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-button);
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--transition-normal);
+    border: 2px solid var(--color-primary);
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-gray-50);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Confirm booking button specific styles */
+#confirm-booking {
+    background-color: var(--color-primary) !important;
+    color: var(--text-white) !important;
+    border: 2px solid var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--transition-normal);
+    width: 100%;
+    height: var(--button-height);
+    border-radius: var(--radius-lg);
+}
+
+#confirm-booking:hover:not(:disabled) {
+    background-color: var(--color-primary-hover) !important;
+    border-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-primary-hover);
+}
+
+#confirm-booking:disabled {
+    background-color: var(--color-gray-400) !important;
+    border-color: var(--color-gray-400);
+    color: var(--color-gray-600) !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
+}
+
+#confirm-booking:not(:disabled) {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Action buttons */
+#new-booking,
+#open-chat {
+    padding: var(--spacing-sm) var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--transition-normal);
+    height: var(--button-height);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+#new-booking {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+#new-booking:hover {
+    background-color: var(--color-gray-50);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+#open-chat {
+    background-color: var(--color-primary);
+    color: var(--text-white);
+    border: 2px solid var(--color-primary);
+}
+
+#open-chat:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-primary-hover);
+}
+
+/* Card styles */
+.card {
+    background: var(--color-white);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-gray-200);
+}
+
+/* Section headers */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-header h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.section-header-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+.section-header-icon i {
+    font-size: var(--font-size-lg);
+}

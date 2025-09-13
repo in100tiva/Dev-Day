@@ -1,0 +1,366 @@
+/* Ticket component styles with CSS variables */
+.ticket-card {
+    background: var(--color-white);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    position: relative;
+    border: none;
+    border-radius: var(--radius-2xl);
+    padding: 2rem;
+    width: var(--ticket-width);
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+
+.ticket-card::before,
+.ticket-card::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--color-primary);
+    border-radius: var(--radius-full);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.ticket-card::before {
+    left: -12px;
+}
+
+.ticket-card::after {
+    right: -12px;
+}
+
+.ticket-notch {
+    position: absolute;
+    width: calc(100% + 2px);
+    left: -1px;
+    height: 2px;
+    background: repeating-linear-gradient(90deg,
+        transparent,
+        transparent 6px,
+        var(--color-gray-300) 6px,
+        var(--color-gray-300) 10px
+    );
+}
+
+.ticket-notch-top {
+    top: 40%;
+}
+
+.ticket-notch-bottom {
+    top: 60%;
+}
+
+.ticket-card::before,
+.ticket-card::after,
+.ticket-notch {
+    opacity: 1;
+}
+
+.dotted-line {
+    border-top: 2px dotted var(--color-gray-300);
+    margin: var(--spacing-lg) 0;
+    width: 100%;
+}
+
+.qr-code {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-code canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Ticket header */
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+}
+
+.ticket-flight-info {
+    flex: 1;
+}
+
+.ticket-flight-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.ticket-flight-number {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.ticket-date-info {
+    text-align: right;
+}
+
+.ticket-date-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.ticket-date-value {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+/* Ticket route */
+.ticket-route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
+}
+
+.ticket-airport {
+    text-align: center;
+    flex: 1;
+}
+
+.ticket-airport-city {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.ticket-airport-code {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.02em;
+}
+
+.ticket-airport-time {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+.ticket-route-separator {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 var(--spacing-xl);
+}
+
+.ticket-route-line {
+    position: absolute;
+    width: 100%;
+    border-top: 2px dashed var(--color-gray-300);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ticket-route-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-primary);
+    z-index: 10;
+    position: relative;
+}
+
+.ticket-route-icon i {
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+}
+
+/* Ticket passenger info */
+.ticket-passenger-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--color-gray-50);
+    border-radius: var(--radius-xl);
+}
+
+.ticket-passenger-details {
+    flex: 1;
+}
+
+.ticket-passenger-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.ticket-passenger-name {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.ticket-seat-details {
+    text-align: right;
+}
+
+.ticket-seat-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.ticket-seat-number {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+/* Ticket footer */
+.ticket-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-xl);
+}
+
+.ticket-boarding-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.ticket-boarding-time {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-primary);
+    color: var(--text-white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    width: fit-content;
+    margin-bottom: var(--spacing-md);
+}
+
+.ticket-terminal-gate {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.ticket-terminal,
+.ticket-gate {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-terminal-label,
+.ticket-gate-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.ticket-terminal-value,
+.ticket-gate-value {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.ticket-qr-section {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.ticket-qr-container {
+    width: 7rem;
+    height: 7rem;
+    background: linear-gradient(to bottom right, rgba(139, 92, 246, 0.05), rgba(168, 85, 247, 0.05));
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.ticket-qr-code {
+    width: 100%;
+    height: 100%;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-boarding-group {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Ticket warning */
+.ticket-warning {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--color-error-light);
+    border: 1px solid var(--color-error);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.ticket-warning-icon {
+    color: var(--color-error);
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+}
+
+.ticket-warning-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-error);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-normal);
+}
+
+.ticket-warning-text strong {
+    font-weight: var(--font-weight-bold);
+}
