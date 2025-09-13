@@ -1,10 +1,22 @@
 # Sistema de Reservas de Voo - Estrutura Modular e Semântica
 
+<div align="center">
+  <img src="assets/01.png" alt="Sistema de Reservas de Voo - Interface Principal" width="800" height="400">
+</div>
+
+---
+
 **Desenvolvedor:** Luan Oliveira dos Santos  
 **Projeto:** Desafio Dev Day  
 **Data:** 2025
 
 Este projeto foi modularizado e refatorado para usar HTML semântico e CSS com variáveis, garantindo melhor organização, acessibilidade e manutenibilidade do código. Foi desenvolvido como parte do desafio do Dev Day, demonstrando boas práticas de desenvolvimento front-end.
+
+## 🚀 Demonstração do Sistema
+
+<div align="center">
+  <img src="assets/02.png" alt="Sistema de Reservas de Voo - Ticket de Embarque" width="800" height="400">
+</div>
 
 ## Estrutura de Arquivos
 
@@ -95,13 +107,26 @@ Cada componente tem seu próprio arquivo CSS usando variáveis:
 2. O sistema carregará automaticamente todos os módulos
 3. Todas as funcionalidades permanecem as mesmas da versão original
 
-## Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-- HTML5
-- CSS3 (com Tailwind CSS)
-- JavaScript ES6+ (módulos)
-- QRCode.js para geração de códigos QR
-- Remix Icons para ícones
+<div align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/PNG-FF6B6B?style=for-the-badge&logo=png&logoColor=white" alt="PNG">
+  <img src="https://img.shields.io/badge/SVG-FFB13B?style=for-the-badge&logo=svg&logoColor=white" alt="SVG">
+</div>
+
+### Principais Tecnologias:
+- **HTML5** - Estrutura semântica
+- **CSS3** - Estilos com variáveis e design system
+- **JavaScript ES6+** - Módulos e classes
+- **Tailwind CSS** - Framework CSS utilitário
+- **QRCode.js** - Geração de códigos QR
+- **Remix Icons** - Biblioteca de ícones
+- **PNG** - Imagens raster para capturas de tela
+- **SVG** - Gráficos vetoriais para assets
 
 ## Funcionalidades
 
@@ -117,3 +142,24 @@ Cada componente tem seu próprio arquivo CSS usando variáveis:
 - ✅ Design System consistente
 - ✅ Suporte a leitores de tela
 - ✅ Navegação por teclado
+
+## 👨‍💻 Desenvolvedor
+
+<div align="center">
+  <img src="assets/logo.svg" alt="Logo do Projeto" width="100" height="100">
+  
+  **Luan Oliveira dos Santos**
+  
+  *Desenvolvedor Front-end*
+  
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/luanoliveira)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/luanoliveira)
+  [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://luanoliveira.dev)
+</div>
+
+---
+
+<div align="center">
+  <p><strong>Projeto desenvolvido para o Desafio Dev Day 2025</strong></p>
+  <p>Demonstrando boas práticas de desenvolvimento front-end moderno</p>
+</div>
