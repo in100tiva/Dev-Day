@@ -1,7 +1,7 @@
 # Sistema de Reservas de Voo - Estrutura Modular e Semântica
 
 <div align="center">
-  <img src="assets/01.png" alt="Sistema de Reservas de Voo - Interface Principal" width="800" height="400">
+  <img src="core/assets/01.png" alt="Sistema de Reservas de Voo - Interface Principal" width="800" height="400">
 </div>
 
 ---
@@ -15,7 +15,7 @@ Este projeto foi modularizado e refatorado para usar HTML semântico e CSS com v
 ## 🚀 Demonstração do Sistema
 
 <div align="center">
-  <img src="assets/02.png" alt="Sistema de Reservas de Voo - Ticket de Embarque" width="800" height="400">
+  <img src="core/assets/02.png" alt="Sistema de Reservas de Voo - Ticket de Embarque" width="800" height="400">
 </div>
 
 ## Estrutura de Arquivos
